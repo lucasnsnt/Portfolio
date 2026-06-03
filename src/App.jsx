@@ -8,6 +8,7 @@ import {
 import fotopessoal from "./assets/fotopessoal.webp" 
 import webapplogin from "./assets/projetosimage/sistemaloginweb.webp"
 import cencosudtraining from "./assets/projetosimage/cencosudtraining.webp"
+import coletorvagas from "./assets/projetosimage/coletorvagas.png"
 import { ScrollReveal } from "./components/ScrollReveal"
 import HeroSection from "./components/HeroSection"
 import ExternalLink from "./components/ExternalLink"
@@ -123,7 +124,7 @@ const Portfolio = () => {
         </div>
         </ScrollReveal>
 
-        <ScrollReveal direction="up" delay={1}>
+        <ScrollReveal direction="up" delay={1} className="carousel-reveal-wrapper">
           <Suspense fallback={<div style={{minHeight: '300px'}} />}>
             <ProjectCarousel
               projects={[
@@ -135,12 +136,24 @@ const Portfolio = () => {
                   imageClass: 'mobile',
                 },
                 {
+                  image: coletorvagas,
+                  alt: t.projects.mock1.alt,
+                  name: t.projects.mock1.name,
+                  desc: t.projects.mock1.desc,
+                  imageClass: 'mobile',
+                },
+                {
                   image: webapplogin,
                   alt: t.projects.login.alt,
                   name: t.projects.login.name,
                   desc: t.projects.login.desc,
                   imageClass: 'mobile',
                 },
+                {/*{
+                  alt: t.projects.mock2.alt,
+                  name: t.projects.mock2.name,
+                  desc: t.projects.mock2.desc,
+                },*/}
               ]}
             />
           </Suspense>

@@ -45,6 +45,24 @@ const translations = {
           </>
         ),
       },
+      mock1: {
+        name: "Plataforma de busca de Vagas",
+        alt: "Plataforma de automação de busca de vagas desenvolvida em Java 21 com Spring Boot, PostgreSQL e notificações via Telegram",
+        desc: (
+          <>
+            Plataforma de automação desenvolvida em <b>Java 21</b> com <b>Spring Boot</b>, responsável pela coleta automática de vagas, deduplicação e envio de notificações via <b>Telegram</b>. Persistência em <b>PostgreSQL</b> com <b>Spring Data JPA</b>, enriquecimento das vagas com <b>LLM via OpenRouter</b> para resumo e reescrita do conteúdo preservando requisitos e stacks. Execução recorrente com <b>@Scheduled</b>, aplicação publicada em <b>VPS</b>.
+          </>
+        ),
+      },
+      mock2: {
+        name: "PROJETO IPSUM",
+        alt: "Projeto mock dois",
+        desc: (
+          <>
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem. Aplicação construída com tecnologias modernas de <strong>front-end</strong> e <strong>back-end</strong>, seguindo padrões <strong>RESTful</strong>. Interface responsiva com foco em experiência do usuário, <strong>performance</strong> e acessibilidade web. Persistência de dados estruturada em camadas com <strong>ORM</strong> e controle de transações.
+          </>
+        ),
+      },
     },
     skills: {
       title: "Minhas Skills",
@@ -110,7 +128,25 @@ const translations = {
         alt: "Web login and authentication system developed in Java with Spring Boot and MySQL",
         desc: (
           <>
-            Web authentication system developed in <strong>Java</strong> with <strong>SpringBoot</strong>, responsible for complete user lifecycle management <strong>(registration, login, logout and protected route access control)</strong>. Persistence in <strong>MySQL</strong>, with <strong>Hibernate</strong> as ORM for data access. Structured in layered architecture, with separation of concerns and session control implementation on the <strong>back-end</strong>.
+            Web authentication system developed in <b>Java</b> with <b>Spring Boot</b>, responsible for complete user lifecycle management (registration, login, logout and protected route access control). Persistence in <b>MySQL</b>, with <b>Hibernate</b> as ORM for data access. Structured in layered architecture (<b>Controller, Service, Repository, Model</b>), with separation of concerns, <b>HttpSession</b>-based session control, cookie handling, login error treatment and session invalidation on logout.
+          </>
+        ),
+      },
+      mock1: {
+        name: "Job Search Platform",
+        alt: "Job vacancy automation platform developed in Java 21 with Spring Boot, PostgreSQL and Telegram notifications",
+        desc: (
+          <>
+            Job vacancy automation platform developed in <b>Java 21</b> with <b>Spring Boot</b>, responsible for automatic vacancy collection, deduplication and notification delivery via <b>Telegram</b>. Persistence in <b>PostgreSQL</b> with <b>Spring Data JPA</b>, vacancy enrichment through <b>LLM via OpenRouter</b> for content summarization and rewriting while preserving requirements and stacks. Recurrent execution with <b>@Scheduled</b>, application deployed on a <b>VPS</b>.
+          </>
+        ),
+      },
+      mock2: {
+        name: "PROJECT IPSUM",
+        alt: "Mock project two",
+        desc: (
+          <>
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem. Application built with modern <strong>front-end</strong> and <strong>back-end</strong> technologies following <strong>RESTful</strong> standards. Responsive interface focused on user experience, <strong>performance</strong> and web accessibility. Data persistence structured in layers using <strong>ORM</strong> and complete transaction control.
           </>
         ),
       },

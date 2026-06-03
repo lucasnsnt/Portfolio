@@ -111,9 +111,24 @@
 
   /* Carousel responsive */
   .carousel-wrapper {
-    max-width: 85%;
+    max-width: 95%;
     padding: 0 3rem;
     margin: 0 auto;
+  }
+
+  /* Setas dentro do wrapper — evita corte pelo clip-path do ScrollReveal */
+  .carousel-arrow-left {
+    left: 0;
+  }
+
+  .carousel-arrow-right {
+    right: 0;
+  }
+
+  /* 1 card por página no mobile via CSS (em sync com JS matchMedia) */
+  .carousel-page {
+    grid-template-columns: 1fr;
+    gap: 0;
   }
 
   .carousel-arrow {
@@ -260,9 +275,33 @@
   }
 
   /* Carousel small screens */
+
+  /* Expande o div .reveal do ScrollReveal para tela cheia, cancelando o
+     padding do .container (1.5rem cada lado) — dá mais largura ao card
+     e garante que o clip-path cubra as setas sem cortá-las */
+  .carousel-reveal-wrapper {
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+    max-width: calc(100% + 3rem);
+  }
+
   .carousel-wrapper {
-    max-width: 90%;
-    padding: 0 2.2rem;
+    max-width: 100%;
+    padding: 0 2.5rem;
+  }
+
+  /* Setas dentro do wrapper (clip-path não corta mais) */
+  .carousel-arrow-left {
+    left: 0.15rem;
+  }
+
+  .carousel-arrow-right {
+    right: 0.15rem;
+  }
+
+  .carousel-page {
+    grid-template-columns: 1fr;
+    gap: 0;
   }
 
   .carousel-arrow {
@@ -275,8 +314,9 @@
     height: 14px;
   }
 
+  /* Imagem mais rasa — libera altura para não esticar tanto o card */
   .project-image-container.mobile {
-    aspect-ratio: 3 / 2;
+    aspect-ratio: 16 / 9;
     padding: 0.5rem;
   }
 

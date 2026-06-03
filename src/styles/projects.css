@@ -56,9 +56,17 @@
 
 .carousel-wrapper {
   position: relative;
-  max-width: 620px;
+  max-width: 960px;
   margin: 0 auto;
   padding: 0 4.5rem;
+}
+
+/* Página com 2 cards lado a lado — align-items: stretch iguala alturas */
+.carousel-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  align-items: stretch;
 }
 
 .carousel-viewport {
@@ -329,7 +337,23 @@
   border: var(--border-width) solid var(--text-color);
   display: flex;
   flex-direction: column;
+  height: 100%;
   transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Placeholder quando o projeto não tem imagem */
+.project-image-placeholder {
+  aspect-ratio: 16 / 11;
+  background-color: var(--bg-color);
+  border-bottom: var(--border-width) solid var(--text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  font-family: var(--texto);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
 .project-image-container {
@@ -364,7 +388,10 @@
 }
 
 .project-info {
-  padding: 2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
   background-color: var(--card-bg);
 }
 
